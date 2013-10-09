@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "97eb95aba3404664e3999b7976a0037a",
+    "hash": "b1b5157ebe2d38aca9ec4ba9572300c2",
     "packages": [
         {
             "name": "ezyang/htmlpurifier",
@@ -184,12 +184,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yiisoft/yii2-composer.git",
-                "reference": "1cf1a92fa177d9cde14c6b51fb87f1fdce59c2f2"
+                "reference": "ad897ede0c6cc747fce802d5a1bc36b0806f0ebe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/1cf1a92fa177d9cde14c6b51fb87f1fdce59c2f2",
-                "reference": "1cf1a92fa177d9cde14c6b51fb87f1fdce59c2f2",
+                "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/ad897ede0c6cc747fce802d5a1bc36b0806f0ebe",
+                "reference": "ad897ede0c6cc747fce802d5a1bc36b0806f0ebe",
                 "shasum": ""
             },
             "require": {
@@ -198,7 +198,7 @@
             "type": "library",
             "autoload": {
                 "psr-0": {
-                    "yii\\composer": ""
+                    "yii\\composer\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -220,7 +220,7 @@
                 "update",
                 "yii"
             ],
-            "time": "2013-09-27 21:27:00"
+            "time": "2013-10-06 16:14:30"
         }
     ],
     "packages-dev": [
