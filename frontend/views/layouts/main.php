@@ -55,7 +55,7 @@ AppAsset::register($this);
 	<?php echo Alert::widget()?>
 	<?php echo $content; ?>
 	</div>
-
+	
 	<footer class="footer">
 		<div class="container">
 		<p class="pull-left">&copy; pomostar@softme.co <?php echo date('Y'); ?></p>
