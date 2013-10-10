@@ -15,6 +15,7 @@ return array(
 	'preload' => array('log'),
 	'controllerNamespace' => 'backend\controllers',
 	'modules' => array(
+		'gii' => 'yii\gii\Module'
 	),
 	'components' => array(
 		'request' => array(

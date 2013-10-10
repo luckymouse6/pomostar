@@ -14,7 +14,7 @@ return array(
 
 	'components.db' => array(
 		'class' => 'yii\db\Connection',
-		'dsn' => 'mysql:host=localhost;dbname=yii2',
+		'dsn' => 'mysql:host=localhost;dbname=pomostar',
 		'username' => 'root',
 		'password' => 'root',
 		'charset' => 'utf8',
