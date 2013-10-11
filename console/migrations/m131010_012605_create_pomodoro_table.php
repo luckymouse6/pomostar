@@ -1,4 +1,5 @@
 <?php
+use yii\db\Schema;
 
 class m131010_012605_create_pomodoro_table extends \yii\db\Migration
 {
@@ -11,36 +12,21 @@ class m131010_012605_create_pomodoro_table extends \yii\db\Migration
 			'id' => Schema::TYPE_PK,
 			'name' => Schema::TYPE_STRING.' NOT NULL',
 			'type' => Schema::TYPE_STRING.'(32) NOT NULL',
-			'pomodoros' => Schema::TYPE_INTEGER.' NOT NULL',
-			'unplanned' => Schema::TYPE_INTEGER.' NOT NULL',
-			'interruptions' => Schema::TYPE_INTEGER.' NOT NULL',
+			'estimated' => Schema::TYPE_INTEGER.' NOT NULL DEFAULT 0',
+			'pomodoros' => Schema::TYPE_INTEGER.' NOT NULL DEFAULT 0',
+			'unplanned' => Schema::TYPE_INTEGER.' NOT NULL DEFAULT 0',
+			'interruptions' => Schema::TYPE_INTEGER.' NOT NULL DEFAULT 0',
 			'created' => Schema::TYPE_DATETIME.' NOT NULL',
-			'closed' => Schema::TYPE_DATETIME.' NOT NULL',
-			'role' => 'tinyint NOT NULL DEFAULT 10',
-			'status' => 'tinyint NOT NULL DEFAULT 10',
-			'create_time' => Schema::TYPE_INTEGER.' NOT NULL',
-			'update_time' => Schema::TYPE_INTEGER.' NOT NULL',
+			'closed' => Schema::TYPE_DATETIME.' NULL',
+			'parent' => Schema::TYPE_INTEGER.' NOT NULL',
+			'ordinal' => Schema::TYPE_INTEGER.' NOT NULL',
+			'parent' => Schema::TYPE_INTEGER.' NOT NULL',
+			'done' => 'tinyint NOT NULL DEFAULT 10',
 		), $tableOptions);		
 	}
 
 	public function down()
 	{
-		$this->dropTable('tbl_pomodoro');
-		echo "m131010_012605_create_pomodoro_table cannot be reverted.\n";
-CREATE TABLE IF NOT EXISTS pomodoro( " +
-                                                "id INTEGER PRIMARY KEY ASC, " +
-                                                "name TEXT, " +
-                                                "type TEXT, " +
-                                                "pomodoros INTEGER, " +
-                                                "unplanned INTEGER, " +
-                                                "interruptions INTEGER, " +
-                                                "created DATETIME, " +
-                                                "closed DATETIME, " +
-                                                "parent INTEGER, " +
-                                                "visible BOOLEAN, " +
-                                                "ordinal INTEGER, " +
-                                                "done BOOLEAN, " +
-                                                "estimated INTEGER )";		
-		return false;
+		$this->dropTable('tbl_pomodoro');		
 	}
 }
